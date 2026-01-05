@@ -7,31 +7,112 @@ pages:
             first-day-of-week: monday
 
           - type: weather
-            location: London, United Kingdom
-            units: metric
+            location: New York, USA
+            units: imperial
             hour-format: 12h
 
-      - size: full
-        widgets:
-          - type: hacker-news
-
-          - type: rss
-            title: r/selfhosted
-            limit: 10
-            collapse-after: 5
-            feeds:
-              - url: https://www.reddit.com/r/selfhosted/.rss
-
-      - size: small
-        widgets:
           - type: markets
+            title: Markets
             markets:
               - symbol: SPY
                 name: S&P 500
+              - symbol: QQQ
+                name: Nasdaq
               - symbol: BTC-USD
                 name: Bitcoin
+              - symbol: ETH-USD
+                name: Ethereum
+              - symbol: NVDA
+                name: NVIDIA
+              - symbol: AAPL
+                name: Apple
+
+          - type: twitch-channels
+            title: Live Now
+            channels:
+              - theprimeagen
+              - piratesoftware
+              - shroud
+              - xqc
+              - sodapoppin
+
+      - size: full
+        widgets:
+          - type: group
+            widgets:
+              - type: hacker-news
+                limit: 10
+                collapse-after: 5
+              - type: lobsters
+                limit: 10
+                collapse-after: 5
+
+          - type: videos
+            title: YouTube
+            channels:
+              - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
+              - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+              - UCsBjURrPoezykLs9EqgamOA # Fireship
+              - UCBJycsmduvYEL83R_U4JriQ # MKBHD
+              - UC0RhatS1pyxInC00YKjjBqQ # GamersNexus
+              - UCVHFbqXqoYvEWM1Ddxl0QKg # Android Authority
+
+          - type: group
+            widgets:
+              - type: rss
+                title: r/technology
+                limit: 8
+                collapse-after: 4
+                feeds:
+                  - url: https://www.reddit.com/r/technology/.rss
+              - type: rss
+                title: r/selfhosted
+                limit: 8
+                collapse-after: 4
+                feeds:
+                  - url: https://www.reddit.com/r/selfhosted/.rss
+
+      - size: small
+        widgets:
+          - type: rss
+            title: World News
+            limit: 12
+            collapse-after: 6
+            feeds:
+              - url: https://feeds.bbci.co.uk/news/world/rss.xml
+                title: BBC
+              - url: https://rss.nytimes.com/services/xml/rss/nyt/World.xml
+                title: NYT
+              - url: https://feeds.npr.org/1004/rss.xml
+                title: NPR
 
           - type: releases
+            title: GitHub Releases
             cache: 1d
             repositories:
+              - immich-app/immich
+              - portainer/portainer
+              - louislam/uptime-kuma
+              - nextcloud/server
+              - jellyfin/jellyfin
               - glanceapp/glance
+
+          - type: bookmarks
+            title: Quick Links
+            groups:
+              - title: Dev
+                links:
+                  - title: GitHub
+                    url: https://github.com
+                  - title: Stack Overflow
+                    url: https://stackoverflow.com
+                  - title: ChatGPT
+                    url: https://chat.openai.com
+              - title: Social
+                links:
+                  - title: Reddit
+                    url: https://reddit.com
+                  - title: Twitter
+                    url: https://twitter.com
+                  - title: YouTube
+                    url: https://youtube.com
