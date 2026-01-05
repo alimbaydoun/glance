@@ -15,9 +15,12 @@ pages:
         widgets:
           - type: hacker-news
 
-          - type: reddit
-            subreddit: selfhosted
-            show-thumbnails: true
+          - type: rss
+            title: r/selfhosted
+            limit: 10
+            collapse-after: 5
+            feeds:
+              - url: https://www.reddit.com/r/selfhosted/.rss
 
       - size: small
         widgets:
