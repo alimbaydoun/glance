@@ -1,0 +1,34 @@
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+            first-day-of-week: monday
+
+          - type: weather
+            location: London, United Kingdom
+            units: metric
+            hour-format: 12h
+
+      - size: full
+        widgets:
+          - type: hacker-news
+
+          - type: reddit
+            subreddit: selfhosted
+            show-thumbnails: true
+
+      - size: small
+        widgets:
+          - type: markets
+            markets:
+              - symbol: SPY
+                name: S&P 500
+              - symbol: BTC-USD
+                name: Bitcoin
+
+          - type: releases
+            cache: 1d
+            repositories:
+              - glanceapp/glance
